@@ -29,7 +29,6 @@ export default function Footer() {
                                 <p className="text-sm font-light mt-1">+971505160610</p>
                             </div>
                         </div>
-
                         <div className="hidden md:block h-12 w-px bg-white/50" />
 
                         <div className="flex items-center gap-4 w-full md:w-auto">
@@ -54,7 +53,6 @@ export default function Footer() {
                                 <p className="text-sm font-light mt-1 leading-tight max-w-45">
                                     Showroom 1 - 3 Nad Al Hamar Rd Dubai
                                 </p>
-
                             </div>
                         </div>
                     </div>

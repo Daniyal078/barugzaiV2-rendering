@@ -68,7 +68,7 @@ export default async function Home() {
         />
       )}
       <Navbar />
-      {/* <HeroSlider banners={banners} /> */}
+      <HeroSlider banners={banners} />
       <ExceptionalDesignSection />
       <OurProcess />
       <BringYourVision />
@@ -76,13 +76,13 @@ export default async function Home() {
       <JourneySection />
       <ApproachSection />
       <ContactConversation />
-      {/* <HomeCTA
+      <HomeCTA
         bg="/images/bg-t4r3453.webp"
         mobBg="/images/v-class-2.png"
         title={`<h3 class="text-2xl md:text-5xl font-light uppercase leading-tight">
               YOUR LEGACY <span class="text-[#c5a059]">STARTS <br> HERE</span></h3>`}
         SubTitle={`Every build is a reflection of who you are. Tell us your vision — we'll bring it to life.`}
-      /> */}
+      />
     </>
   );
 }

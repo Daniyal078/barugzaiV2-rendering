@@ -1,16 +1,18 @@
 import Link from "next/link";
 
+interface HomeCTAProps {
+    bg: string;
+    mobBg: string;
+    title: string;
+    SubTitle: string;
+}
+
 export default function HomeCTA({
     bg,
     title,
     SubTitle,
     mobBg,
-}: {
-    bg: string;
-    mobBg: string;
-    title: string;
-    SubTitle: string;
-}) {
+}: HomeCTAProps) {
     return (
         <section className="relative w-full h-[80vh] md:h-screen flex items-center justify-center overflow-hidden">
             {/* Mobile Background Image */}
@@ -25,7 +27,7 @@ export default function HomeCTA({
                 style={{ backgroundImage: `url('${bg}')` }}
             />
 
-            {/* Content Container (Sirf ek baar render ho raha hai) */}
+            {/* Content Container */}
             <div className="relative z-10 max-w-4xl px-6 text-center text-white">
                 <div
                     className="font-nexa"
@@ -37,13 +39,16 @@ export default function HomeCTA({
                 </p>
 
                 <div className="pt-10">
-                    <button className="px-12 py-4 border border-white/40 rounded-xl text-[10px] md:text-xs tracking-[0.3em] uppercase font-semibold font-nexa transition-all hover:border-[#c5a059]">
-                        <Link href="/cars-for-sale">START YOUR BUILD</Link>
-                    </button>
+                    <Link
+                        href="/cars-for-sale"
+                        className="inline-block px-12 py-4 border border-white/40 rounded-xl text-[10px] md:text-xs tracking-[0.3em] uppercase font-semibold font-nexa transition-all hover:border-[#c5a059]"
+                    >
+                        START YOUR BUILD
+                    </Link>
                 </div>
             </div>
 
-            {/* Overlay Gradient (Tailwind v4 syntax: bg-gradient-to-t) */}
+            {/* Bottom Overlay Gradient */}
             <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-t from-[#111] to-transparent z-10 pointer-events-none" />
         </section>
     );
