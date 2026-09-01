@@ -1,5 +1,3 @@
-'use client'
-
 const servicesData = [
     {
         id: 1,
