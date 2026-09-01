@@ -87,7 +87,7 @@ export default function HeroSlider({
 
     return (
         <section
-            className="relative h-[60vh] md:h-screen w-full overflow-hidden bg-black text-white select-none"
+            className="relative md:max-h-[800px] h-screen w-full overflow-hidden bg-black text-white select-none"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
             onTouchStart={handleTouchStart}
@@ -175,10 +175,10 @@ export default function HeroSlider({
                                 <div className="w-10 md:w-24 h-1 bg-white/20 overflow-hidden rounded-full backdrop-blur-xs transition-all duration-300 group-hover:bg-white/40">
                                     <div
                                         className={`h-full bg-yellow-500 transition-all ${isActive && !isPaused
-                                                ? "w-full duration-[5000ms] linear"
-                                                : isActive && isPaused
-                                                    ? "w-full"
-                                                    : "w-0 duration-300 ease-out"
+                                            ? "w-full duration-[5000ms] linear"
+                                            : isActive && isPaused
+                                                ? "w-full"
+                                                : "w-0 duration-300 ease-out"
                                             }`}
                                     />
                                 </div>
