@@ -15,19 +15,16 @@ export default function HomeCTA({
 }: HomeCTAProps) {
     return (
         <section className="relative w-full h-[80vh] md:h-screen flex items-center justify-center overflow-hidden">
-            {/* Mobile Background Image */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-black bg-center bg-no-repeat md:hidden"
                 style={{ backgroundImage: `url('${mobBg}')` }}
             />
 
-            {/* Desktop Background Image */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-black bg-center bg-no-repeat hidden md:block"
                 style={{ backgroundImage: `url('${bg}')` }}
             />
 
-            {/* Content Container */}
             <div className="relative z-10 max-w-4xl px-6 text-center text-white">
                 <div
                     className="font-nexa"
@@ -48,7 +45,6 @@ export default function HomeCTA({
                 </div>
             </div>
 
-            {/* Bottom Overlay Gradient */}
             <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-t from-[#111] to-transparent z-10 pointer-events-none" />
         </section>
     );

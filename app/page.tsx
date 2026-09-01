@@ -68,7 +68,7 @@ export default async function Home() {
         />
       )}
       <Navbar />
-      {/* <HeroSlider banners={banners} /> */}
+      <HeroSlider banners={banners} />
       <ExceptionalDesignSection />
       <OurProcess />
       <BringYourVision />
