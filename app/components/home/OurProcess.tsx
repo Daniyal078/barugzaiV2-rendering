@@ -5,28 +5,28 @@ const steps = [
     {
         id: "01",
         title: "CONSULT",
-        icon: <MessageSquare strokeWidth={0.5} className="w-26 h-26 text-white" />,
+        icon: <MessageSquare strokeWidth={0.5} className="w-28 h-28 text-white" />,
         description: "Choose your package and preferred time. We'll confirm within 2 hours with all details.",
         img: '/images/Consult.png'
     },
     {
         id: "02",
         title: "DESIGN",
-        icon: <Car strokeWidth={0.5} className="w-26 h-26 text-white" />,
+        icon: <Car strokeWidth={0.5} className="w-28 h-28 text-white" />,
         description: "Our team arrives at your location fully equipped. No disruption to your day.",
         img: '/images/DESIGN.png'
     },
     {
         id: "03",
         title: "BUILD",
-        icon: <Wrench strokeWidth={0.5} className="w-26 h-26 text-white" />,
+        icon: <Wrench strokeWidth={0.5} className="w-28 h-28 text-white" />,
         description: "Each improvement or repair is done properly. Parts used are tested and approved, which means the car will run exactly as expected.",
         img: '/images/BUILD.png'
     },
     {
         id: "04",
         title: "DELIVER",
-        icon: <Gift strokeWidth={0.5} className="w-26 h-26 text-white" />,
+        icon: <Gift strokeWidth={0.5} className="w-28 h-28 text-white" />,
         description: "Our team will do the final inspection of the car and explain to you everything done on the vehicle before returning the keys",
         img: '/images/DELIVER.png'
     }
@@ -76,21 +76,14 @@ export default function OurProcess() {
                                 key={step.id}
                                 className="flex flex-col items-center group cursor-pointer"
                             >
-
-                                {/* Circular Container */}
                                 <div className="relative xl:w-64 md:w-54 md:h-54 xl:h-64 rounded-full flex items-center justify-center mb-8 transition-all duration-500 border-2 border-transparent group-hover:border-primary bg-[#272727]">
-
-                                    {/* Step Number Badge */}
                                     <div className="absolute top-0 z-20 bg-white text-black rounded-full w-12 h-12 flex items-center text-3xl  justify-center -translate-y-1/2">
                                         {step.id}
                                     </div>
 
-                                    {/* Icon (Hidden on hover) */}
                                     <div className={`z-10 duration-300 opacity-100 group-hover:opacity-0`}>
                                         {step.icon}
                                     </div>
-
-                                    {/* Image Reveal */}
                                     <div className="absolute inset-0 z-0">
                                         <Image
                                             src={step.img}
@@ -102,7 +95,6 @@ export default function OurProcess() {
                                     </div>
                                 </div>
 
-                                {/* Text Content */}
                                 <div className="text-center space-y-2 px-4">
                                     <h4 className={`text-2xl tracking-[0.2em] font-nexa font-light transition-colors duration-300 text-primary`}>
                                         {step.title}
