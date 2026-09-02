@@ -119,16 +119,12 @@ export default function Navbar({ navLinks }: { navLinks?: NavLink[] }) {
 
     return (
         <div className="relative w-full">
-            <div className={`fixed inset-0 z-100 transition-opacity backdrop-blur duration-500 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-
-                {/* --- BACKGROUND OVERLAY (CLICK TO CLOSE) --- */}
-                <div
-                    className="absolute inset-0 bg-black/60 backdrop-blur-sm cursor-pointer"
+            <div className={`fixed inset-0 z-50 transition-opacity backdrop-blur duration-500 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                <div className="absolute inset-0 bg-black/60 backdrop-blur-sm cursor-pointer"
                     onClick={closeNavbar}
                 />
 
-                {/* --- SIDE MENU PANEL --- */}
-                <div className={`absolute inset-y-0 left-0 w-full md:w-112.5 bg-[#0a0a0ace] backdrop-blur-xs border-r border-white/10
+                <div className={`absolute inset-y-0 left-0 w-full md:w-96 bg-[#0a0a0ace] backdrop-blur-xs border-r border-white/10
                 overflow-hidden transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] z-10
                     ${isOpen
                         ? "translate-x-0 opacity-100"
@@ -136,7 +132,6 @@ export default function Navbar({ navLinks }: { navLinks?: NavLink[] }) {
                     }
                     `}>
                     <div className={`flex flex-col h-full p-10 transition-all duration-700
-
                     ${isOpen
                             ? "opacity-100 translate-y-0"
                             : "opacity-0 translate-y-8"
@@ -151,7 +146,6 @@ export default function Navbar({ navLinks }: { navLinks?: NavLink[] }) {
                             }
                         </button>
                         <div className="relative flex-1 mt-10 overflow-hidden">
-                            {/* MAIN MENU */}
                             <div
                                 className={`
                                         absolute inset-0
@@ -220,7 +214,6 @@ export default function Navbar({ navLinks }: { navLinks?: NavLink[] }) {
                                 </nav>
                             </div>
 
-                            {/* MODEL MENU */}
                             <div
                                 className={`
                                         absolute inset-0 overflow-y-auto pr-3
@@ -275,11 +268,8 @@ export default function Navbar({ navLinks }: { navLinks?: NavLink[] }) {
                 </div>
             </div>
 
-            {/* --- TOP HEADER --- */}
-            <header className={`absolute w-full top-0 z-50 transition-all duration-300 ${scrolled ? "fixed shadow-lg" : "bg-transparent"}`}>
+            <header className={`absolute w-full top-0 z-40 transition-all duration-300 ${scrolled ? "fixed shadow-lg" : "bg-transparent"}`}>
                 <nav className={`flex items-center justify-between duration-300 transition-all ${scrolled ? "py-2 bg-black/50" : "py-5 bg-black/80"} px-6 lg:px-12 backdrop-blur-md`}>
-
-                    {/* Left: Menu Toggle (Mobile par same sizing aur perfect square base) */}
                     <div className="flex md:w-1/3 justify-start">
                         <button
                             onClick={() => setIsOpen(true)}
@@ -296,7 +286,6 @@ export default function Navbar({ navLinks }: { navLinks?: NavLink[] }) {
                         </button>
                     </div>
 
-                    {/* Center: Logo (Pure dead-center positioning) */}
                     <div className="flex justify-center flex-1 md:flex-initial md:w-1/3">
                         <a className="object-contain duration-300 relative flex items-center" href={'/'}>
                             {scrolled ?
@@ -307,7 +296,6 @@ export default function Navbar({ navLinks }: { navLinks?: NavLink[] }) {
                         </a>
                     </div>
 
-                    {/* Right: Phone Button (Exact mobile sizing to match menu) */}
                     <div className="flex md:w-1/3 justify-end">
                         <a
                             href="tel:+971505160610"
@@ -321,7 +309,6 @@ export default function Navbar({ navLinks }: { navLinks?: NavLink[] }) {
                     </div>
                 </nav>
 
-                {/* Sub Navigation Links */}
                 {navLinks &&
                     <div className={`md:flex hidden flex-wrap uppercase justify-center duration-300 gap-x-8 gap-y-2 py-4 ${scrolled ? 'bg-black/50' : 'bg-black/80'}  backdrop-blur-sm`}>
                         {navLinks?.map((item) => (

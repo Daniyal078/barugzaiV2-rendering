@@ -117,7 +117,7 @@ export default async function page() {
 
                     <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:h-125 items-center mt-8 lg:mt-0">
 
-                        <div className="relative h-100 lg:h-115 rounded-3xl overflow-hidden border border-white/10 shadow-xl lg:-rotate-2 hover:rotate-0 transition-all duration-500 ease-out group">
+                        <div className="relative h-100 lg:h-[415px] rounded-3xl overflow-hidden border border-white/10 shadow-xl lg:-rotate-2 hover:rotate-0 transition-all duration-500 ease-out group">
                             <Image
                                 src="/images/BARUGZAI-deffender.png"
                                 alt="Cyan Neon Premium Interior"
@@ -127,7 +127,7 @@ export default async function page() {
                             <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                         </div>
 
-                        <div className="relative h-100 lg:h-107.5 rounded-3xl overflow-hidden border border-white/10 shadow-xl lg:rotate-2 lg:translate-y-4 hover:rotate-0 hover:translate-y-0 transition-all duration-500 ease-out group">
+                        <div className="relative h-100 lg:h-[420px] rounded-3xl overflow-hidden border border-white/10 shadow-xl lg:rotate-2 lg:translate-y-4 hover:rotate-0 hover:translate-y-0 transition-all duration-500 ease-out group">
                             <Image
                                 src="/images/img453523.png"
                                 alt="Warm White Executive Interior"
@@ -140,7 +140,7 @@ export default async function page() {
                 </div>
             </section>
 
-            <section className="bg-secondary/95 text-white md:py-24 px-4 sm:px-6 lg:px-8">
+            <section className="bg-secondary-foreground text-white md:py-24 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto">
 
                     {/* Top Minimal Header */}

@@ -14,7 +14,7 @@ export default function HomeCTA({
     mobBg,
 }: HomeCTAProps) {
     return (
-        <section className="relative w-full h-[900px] md:max-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative w-full md:h-[900px] h-[700px] max-h-[900px] flex items-center justify-center overflow-hidden">
             <div
                 className="absolute inset-0 z-0 bg-cover bg-black bg-center bg-no-repeat md:hidden"
                 style={{ backgroundImage: `url('${mobBg}')` }}

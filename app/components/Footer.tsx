@@ -11,7 +11,7 @@ export default function Footer() {
                     <Image src={'/images/suvs/WP-icon.webp'} width={25} height={25} alt="WPICon" />
                 </button>
             </Link>
-            <Link className="fixed right-0 bg-primary grid rounded-full md:p-4 md:m-8 md:bottom-18 z-20 bottom-14 p-2 m-2" href='tel:+971505160610'>
+            <Link className="fixed right-0 bg-primary grid rounded-full md:p-4 md:m-8 md:bottom-18 z-20 bottom-16 p-2 m-2" href='tel:+971505160610'>
                 <button className="btn rounded btn-warning border-warning rounded-5">
                     <Phone size={26} />
                 </button>

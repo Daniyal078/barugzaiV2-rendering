@@ -69,7 +69,7 @@ export default function ContactConversation({ secId }: UnitsInStockProps) {
 
                         {!loading && !error && teamMembers.map((member) => (
                             <div key={member.id}
-                                className="relative group rounded-2xl overflow-hidden bg-[#222] aspect-3/4">
+                                className="relative group rounded-2xl overflow-hidden bg-[#222] h-96">
                                 {member.profile_image_url && (
                                     <Image
                                         src={api_base_url + '/storage/app/public/' + member.profile_image}

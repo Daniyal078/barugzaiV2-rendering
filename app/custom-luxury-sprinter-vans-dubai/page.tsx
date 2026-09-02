@@ -207,7 +207,7 @@ export default async function page({ searchParams }: { searchParams: Promise<Rec
             <ContactConversation secId={'CONTACT-US'} />
             <section>
                 <section className='bg-secondary text-white overflow-hidden'>
-                    <div className={`mx-auto max-w-7xl py-10 px-6 space-y-9 relative transition-opacity  duration-500 ${isExpanded ? "h-full" : "h-75"}`}>
+                    <div className={`mx-auto max-w-7xl py-10 px-6 space-y-9 relative transition-opacity  duration-500 ${isExpanded ? "h-full" : "h-80"}`}>
                         <div className='space-y-4'>
                             <h1 className='md:text-4xl text-2xl capitalize'>Buy a Custom Luxury Mercedes Sprinter In Dubai - Built by Barugzai</h1>
                             <p>At the core of our offering is entirely personalized interior configuration. Our custom-built Sprinters are the new mark of stylish travel. Connect with us to find a luxury Sprinter van for sale Dubai.</p>
@@ -278,7 +278,7 @@ export default async function page({ searchParams }: { searchParams: Promise<Rec
                             </div>
                         </div>
                         {!isExpanded ?
-                            <div className='w-full max-w-7xl h-50 bg-linear-to-t from-secondary to-transparent absolute left-0 bottom-0'></div> : ''
+                            <div className='w-full max-w-7xl h-52 bg-gradient-to-t from-secondary to-transparent absolute left-0 bottom-0'></div> : ''
                         }
                     </div>
                 </section>
@@ -288,8 +288,6 @@ export default async function page({ searchParams }: { searchParams: Promise<Rec
                     </div>
                 </div>
             </section>
-
-
             <FAQ
                 subHeading={'Get answers to common questions about our custom Luxury sprinter vans Dubai'}
                 faqs={faqs} />

@@ -323,7 +323,7 @@ export default async function page({ searchParams }: { searchParams: Promise<Rec
                         </div>
 
                         {!isExpanded ?
-                            <div className='w-full max-w-7xl h-50 bg-linear-to-t from-secondary to-transparent absolute left-0 bottom-0'></div> : ''
+                            <div className='w-full max-w-7xl h-52 bg-linear-to-t from-secondary to-transparent absolute left-0 bottom-0'></div> : ''
                         }
                     </div>
                 </section>

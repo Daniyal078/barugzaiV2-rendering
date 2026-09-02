@@ -1,12 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import * as React from "react"
-import Image from "next/image"
 import { ChevronLeft, ChevronRight, X, LayoutPanelTop } from "lucide-react"
 import { useState, useEffect, useCallback, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-
 import { Button } from "@/components/ui/button"
 import {
     Dialog,
@@ -15,6 +12,7 @@ import {
     DialogClose,
 } from "@/components/ui/dialog"
 import { api_base_url, cn } from "@/lib/utils"
+import Image from "next/image"
 
 export function GalleryModal({ data, isOpen, onClose, initialIndex }: any) {
     const STORAGE_BASE = api_base_url + '/storage/app/public'
@@ -75,7 +73,6 @@ export function GalleryModal({ data, isOpen, onClose, initialIndex }: any) {
 
                 {/* Top Controls */}
                 <div className="absolute right-7 top-7 z-50 flex gap-2">
-
                     <DialogClose className="rounded-full bg-black/40 p-2 cursor-pointer text-white backdrop-blur-sm hover:bg-background/40 transition-colors">
                         <X className="h-6 w-6" />
                     </DialogClose>
@@ -107,9 +104,11 @@ export function GalleryModal({ data, isOpen, onClose, initialIndex }: any) {
                                 }}
                                 className="absolute w-full h-full"
                             >
-                                <img src={storageUrl(data.car.images[currentIndex].url) || ''}
+                                <Image src={storageUrl(data.car.images[currentIndex].url) || ''}
                                     alt="Gallery"
-                                    className="object- p-4"
+                                    className="object-contain w-full"
+                                    width={800}
+                                    height={600}
                                 />
                             </motion.div>
                         </AnimatePresence>
@@ -142,7 +141,7 @@ export function GalleryModal({ data, isOpen, onClose, initialIndex }: any) {
                             exit={{ height: 0, opacity: 0 }}
                             className="w-full bg-black/20 backdrop-blur-md border-t border-white/10 overflow-hidden"
                         >
-                            <div className="w-full overflow-hidden no-scrollbar py-4 px-4">
+                            <div className="w-full overflow-hidden no-scrollbar py-4">
                                 <div className="flex justify-start sm:justify-center gap-3 min-w-max">
                                     {data.car.images.map((image: any, index: number) => (
                                         <button

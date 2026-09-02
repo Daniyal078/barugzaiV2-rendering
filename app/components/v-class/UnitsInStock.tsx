@@ -39,7 +39,7 @@ export default function UnitsInStock({ secId, vehicleTypes = [] }: UnitsInStockP
                                             alt=''
                                             width={500}
                                             height={400}
-                                            className='w-full lg:h-75 h-50 object-cover duration-300 hover:scale-105 overflow-hidden'
+                                            className='w-full lg:h-72 h-52 object-cover duration-300 hover:scale-105 overflow-hidden'
                                         />
                                     </div>
                                     <div className='uppercase text-center text-white lg:text-xl py-7 font-light tracking-[5px]'>{vehicle.title}</div>

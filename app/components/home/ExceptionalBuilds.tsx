@@ -45,7 +45,7 @@ export default function ExceptionalBuilds() {
                 <div className='grid items-start md:grid-cols-3 gap-5'>
                     {vehicleTypes.map((vehicle, index) => (
                         <div key={index} className='bg-[#272727] p-3 space-y-4 h-full'>
-                            <div className={`overflow-hidden rounded-2xl lg:[&_img]:h-100 [&_img]:h-50 ${index == 1 ? 'lg:[&_img]:h-96 [&_img]:h-60' : ''}`}>
+                            <div className={`overflow-hidden rounded-2xl lg:[&_img]:h-[420px] [&_img]:h-52 ${index == 1 ? 'lg:[&_img]:h-[450px] [&_img]:h-60' : ''}`}>
                                 <Link href={vehicle.url}>
                                     <Image
                                         src={vehicle.image}
